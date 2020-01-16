@@ -127,5 +127,12 @@ headerEl.append(Learnmore);
 headerEl.prepend(Funding);
 
 //stretch goal update style 
-firstnav.style.color='red';
+function navstyle(){
+  return firstnav.style.color='blue'};
+function normal(){
+  return firstnav.style.color='black'};
+
 secondnav.style.color= 'purple';
+
+firstnav.addEventListener( 'mouseenter', navstyle);
+firstnav.addEventListener('mouseleave', normal);
