@@ -127,12 +127,21 @@ headerEl.append(Learnmore);
 headerEl.prepend(Funding);
 
 //stretch goal update style 
-function navstyle(){
-  return firstnav.style.color='blue'};
-function normal(){
-  return firstnav.style.color='black'};
 
-secondnav.style.color= 'purple';
 
-firstnav.addEventListener( 'mouseenter', navstyle);
-firstnav.addEventListener('mouseleave', normal);
+
+function hoverchange(element){
+  return element.addEventListener( 'mouseenter', (element)=> {element.target.style.color='red';});};
+function normal(element){
+  return element.addEventListener('mouseleave',(element)=> {element.target.style.color='black';});};
+
+  hoverchange(firstnav);
+  hoverchange(secondnav);
+  hoverchange(thirdnav);
+  normal(firstnav);
+  normal(secondnav);
+  normal(thirdnav);
+
+
+
+
